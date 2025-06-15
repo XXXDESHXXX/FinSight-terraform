@@ -3,9 +3,15 @@ variable "project_id" {
   type        = string
 }
 
-variable "region" {
-  description = "GCP region"
+variable "zone" {
+  description = "GCP zone"
   type        = string
+}
+
+variable "disk_size" {
+  description = "Disk size of nodes"
+  type        = number
+  default     = 20
 }
 
 variable "cluster_name" {
