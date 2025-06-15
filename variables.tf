@@ -28,6 +28,7 @@ variable "node_count" {
 variable "disk_type" {
   description = "Disk type of nodes"
   type        = string
+  default     = 20
 }
 
 variable "node_machine_type" {
