@@ -7,6 +7,7 @@ module "gke_cluster" {
   source       = "../../modules/gke-cluster"
   cluster_name = var.cluster_name
   location     = var.zone
+  project_id = var.project_id
 }
 
 module "gcs_backend" {
