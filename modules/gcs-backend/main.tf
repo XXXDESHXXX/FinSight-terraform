@@ -24,5 +24,5 @@ resource "google_storage_bucket_iam_member" "bucket_writer" {
   role   = "roles/storage.objectAdmin"
   member = var.writer_member
 
-  depends_on = [var.writer_sa_depends_on]
+  depends_on = var.writer_sa_depends_on
 }
