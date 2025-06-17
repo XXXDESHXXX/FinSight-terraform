@@ -4,6 +4,9 @@ zone         = "your-zone"
 cluster_name = "your-cluster-name"
 
 account_id   = "your-account-id"
+terraform_sa_roles = [
+    "your-roles"
+]
 
 db_pool_name     = "your-db-pool-name"
 db_node_count    = 2

@@ -10,3 +10,10 @@ variable "location" {
 variable "writer_member" {
   type = string
 }
+
+variable "writer_role" {
+  type        = string
+  description = "IAM role for bucket access"
+  default     = "roles/storage.objectAdmin"
+}
+

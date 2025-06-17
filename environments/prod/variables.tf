@@ -20,8 +20,11 @@ variable "terraform_sa_roles" {
   description = "IAM roles to assign to the Terraform service account"
 }
 
-
-
+variable "bucket_writer_role" {
+  type        = string
+  description = "IAM role for bucket access"
+  default     = "roles/storage.objectAdmin"
+}
 
 variable "db_pool_name"     { type = string }
 variable "db_node_count"    { type = number }
