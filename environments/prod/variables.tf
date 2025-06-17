@@ -26,6 +26,22 @@ variable "bucket_writer_role" {
   default     = "roles/storage.objectAdmin"
 }
 
+
+variable "kms_key_ring_name" {
+  description = "Name of the KMS key ring"
+  type        = string
+}
+
+variable "kms_crypto_key_name" {
+  description = "Name of the KMS crypto key"
+  type        = string
+}
+
+variable "kms_members" {
+  description = "List of IAM members allowed to encrypt/decrypt with this key"
+  type        = list(string)
+}
+
 variable "db_pool_name"     { type = string }
 variable "db_node_count"    { type = number }
 variable "db_machine_type"  { type = string }

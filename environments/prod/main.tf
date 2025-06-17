@@ -36,3 +36,12 @@ module "db_node_pool" {
   disk_size    = var.db_disk_size
   disk_type    = var.db_disk_type
 }
+
+module "kms_key" {
+  source         = "../../modules/kms-key"
+  project_id     = var.project_id
+  location       = var.region
+  key_ring_name  = var.kms_key_ring_name
+  crypto_key_name= var.kms_crypto_key_name
+  members        = var.kms_members
+}
