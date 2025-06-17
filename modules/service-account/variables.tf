@@ -13,4 +13,5 @@ variable "display_name" {
 
 variable "roles" {
   type = list(string)
+  description = "List of IAM roles to assign to the service account"
 }

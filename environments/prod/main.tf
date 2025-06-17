@@ -22,9 +22,7 @@ module "terraform_sa" {
   project_id   = var.project_id
   account_id   = var.terraform_sa_account_id
   display_name = "Terraform Service Account"
-  roles        = [
-    "roles/storage.admin",
-  ]
+  roles        = var.terraform_sa_roles
 }
 
 module "db_node_pool" {
