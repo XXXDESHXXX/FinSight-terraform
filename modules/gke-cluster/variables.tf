@@ -4,3 +4,8 @@ variable "cluster_name" {
 variable "location" {
   type = string
 }
+
+variable "project_id" {
+  type = string
+}
+
