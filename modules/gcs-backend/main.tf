@@ -23,4 +23,6 @@ resource "google_storage_bucket_iam_member" "bucket_writer" {
   bucket = google_storage_bucket.tf_state.name
   role   = "roles/storage.objectAdmin"
   member = var.writer_member
+
+  depends_on = [var.writer_sa_depends_on]
 }

@@ -14,6 +14,7 @@ module "gcs_backend" {
   bucket_name = "gke-finsight-state"
   location    = var.region
   writer_member = "serviceAccount:terraform@${var.project_id}.iam.gserviceaccount.com"
+  writer_sa_depends_on = [module.terraform_sa]
 }
 
 module "terraform_sa" {
