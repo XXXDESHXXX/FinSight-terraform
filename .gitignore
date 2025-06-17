@@ -1,4 +1,4 @@
-terraform.tfvars
+environments/prod/terraform.tfvars
 *.auto.tfvars
 *.tfstate
 *.tfstate.*
