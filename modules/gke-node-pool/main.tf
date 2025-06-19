@@ -18,9 +18,12 @@ resource "google_container_node_pool" "node_pool" {
       disable-legacy-endpoints = "true"
     }
 
-    access_config = var.no_external_ip ? [] : [{}]
+
   }
 
+  network_config {
+      create_with_no_public_ip = var.no_external_ip
+    }
   lifecycle {
     ignore_changes = [node_count]
   }
