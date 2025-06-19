@@ -38,6 +38,18 @@ module "db_node_pool" {
   disk_type    = var.db_disk_type
 }
 
+module "kafka_node_pool" {
+  source       = "../../modules/gke-node-pool"
+  name         = var.kafka_pool_name
+  cluster      = module.gke_cluster.cluster_name
+  location     = var.zone
+  node_count   = var.kafka_node_count
+  machine_type = var.kafka_machine_type
+  disk_size    = var.kafka_disk_size
+  disk_type    = var.kafka_disk_type
+}
+
+
 module "kms_key" {
   source         = "../../modules/kms-key"
   project_id     = var.project_id
