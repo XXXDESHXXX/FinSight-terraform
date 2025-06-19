@@ -47,6 +47,7 @@ module "kafka_node_pool" {
   machine_type = var.kafka_machine_type
   disk_size    = var.kafka_disk_size
   disk_type    = var.kafka_disk_type
+  no_external_ip = true
 }
 
 

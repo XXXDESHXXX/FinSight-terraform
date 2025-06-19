@@ -13,6 +13,10 @@ resource "google_container_node_pool" "node_pool" {
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
+
+    network_config {
+      no_external_ip = var.no_external_ip
+    }
   }
 
   lifecycle {
