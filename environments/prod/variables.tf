@@ -47,9 +47,3 @@ variable "db_node_count"    { type = number }
 variable "db_machine_type"  { type = string }
 variable "db_disk_size"     { type = number }
 variable "db_disk_type"     { type = string }
-
-variable "kafka_pool_name" { type = string}
-variable "kafka_node_count" { type = number}
-variable "kafka_machine_type"  { type = string}
-variable "kafka_disk_size" { type = number}
-variable "kafka_disk_type" { type = string}

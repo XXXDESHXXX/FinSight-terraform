@@ -5,8 +5,3 @@ variable "node_count"   { type = number }
 variable "machine_type" { type = string }
 variable "disk_size"    { type = number }
 variable "disk_type"    { type = string }
-variable "no_external_ip" {
-  description = "Whether to disable external IPs for nodes"
-  type        = bool
-  default     = false
-}
