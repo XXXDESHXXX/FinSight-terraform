@@ -42,8 +42,8 @@ variable "kms_members" {
   type        = list(string)
 }
 
-variable "db_pool_name"     { type = string }
-variable "db_node_count"    { type = number }
-variable "db_machine_type"  { type = string }
-variable "db_disk_size"     { type = number }
-variable "db_disk_type"     { type = string }
+variable "stateful_services_pool_name"     { type = string }
+variable "stateful_services_machine_type"  { type = string }
+variable "stateful_services_disk_size"     { type = number }
+variable "stateful_services_disk_type"     { type = string }
+variable "stateful_services_node_count" { type = number}

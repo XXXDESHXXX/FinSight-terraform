@@ -35,15 +35,15 @@ module "terraform_sa" {
   roles        = var.terraform_sa_roles
 }
 
-module "db_node_pool" {
+module "stateful_services_node_pool" {
   source       = "../../modules/gke-node-pool"
-  name         = var.db_pool_name
+  name         = var.stateful_services_pool_name
   cluster      = module.gke_cluster.cluster_name
   location     = var.zone
-  node_count   = var.db_node_count
-  machine_type = var.db_machine_type
-  disk_size    = var.db_disk_size
-  disk_type    = var.db_disk_type
+  node_count   = var.stateful_services_node_count
+  machine_type = var.stateful_services_machine_type
+  disk_size    = var.stateful_services_disk_size
+  disk_type    = var.stateful_services_disk_type
 }
 
 module "kms_key" {
